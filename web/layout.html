@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+
+	html, body
+	{
+		margin: 0px;
+		width: 100%;
+		height: 100%;
+	}
+
+	#columns
+	{
+
+	}
+
+	.cell
+	{
+		display: inline;
+		position: absolute;
+		width: 384px;
+		height: 384px;
+	}
+
+	.cellcontent
+	{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		overflow: hidden;
+	}
+
+	.label
+	{
+		background-color: rgba(255,255,255,0.8);
+		left: 16px;
+		top: 16px;
+		bottom: 16px;
+		right: 16px;
+		position: absolute;
+		padding: 16px;
+		text-align: center;
+	}
+
+	#cell1
+	{
+		background-color: red;
+		left: 0px;
+	}
+
+	#cell2
+	{
+		background-color: orange;
+		left: 400px;
+	}
+
+	#cells
+	{
+		position: relative;
+		width: 784px;
+		height: 384px;
+		border: 1px black solid;
+	}
+
+	#all
+	{
+		width: 784px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.title
+	{
+		font-weight: bold;
+	}
+
+	.top
+	{
+		float: right;
+	}
+
+	#cells
+	{
+		clear: both;
+	}
+
+</style>
+</head>
+<body>
+	
+	<div id="all">
+
+		<div>
+			<span class="title">wip3r</span>
+			<span class="top">2-player</span>
+		</div>
+
+		<div id="cells">
+
+			<div id="cell1" class="cell">
+				<canvas width="384" height="384" class="cellcontent"></canvas>
+				<div class="cellcontent" style="z-index: -1">
+					<span class="label crap">cell 1</span>
+				</div>
+			</div>
+
+			<div id="cell2" class="cell">
+				<canvas width="384" height="384" class="cellcontent"></canvas>
+				<div class="cellcontent" style="z-index: -1">
+					<div class="label crap">cell 2</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div>
+			stuff below..
+		</div>
+
+	</div>
+
+</body>
+</html>

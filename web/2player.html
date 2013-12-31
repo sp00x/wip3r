@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>wip3r - 2player</title>
+		<link rel="stylesheet" type="text/css" href="2player.css" />
+		<script src="EventTarget.js" type="text/javascript"></script>
+		<script src="game.js" type="text/javascript"></script>
+		<script src="index.js" type="text/javascript"></script>
+		<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+	</head>
+	<body onload="init2()">
+	
+		<div id="all">
+
+			<div>
+				<span class="title">wip3r</span>
+				<span class="top">2-player</span>
+			</div>
+
+			<div id="cells">
+
+				<div id="cell1" class="cell">
+					<div class="cellcontent vacant" id="board1"></div>
+					<div class="cellcontent" style="z-index: -10">
+						<span class="label" id="text1">cell 1</span>
+					</div>
+				</div>
+
+				<div id="cell2" class="cell">
+					<div class="cellcontent vacant" id="board2"></div>
+					<div class="cellcontent" style="z-index: -10">
+						<span class="label" id="text2">cell 2</span>
+					</div>
+				</div>
+
+			</div>
+
+			<div>
+				<input id="resetButton" type="button" value="Reset" onclick="resetGame()" />
+    			<input id="suggestButton" type="button" value="Suggest" onclick="suggestGame()" />
+    			<input id="acceptButton" type="button" value="Accept" onclick="acceptGame()" style="display: none" />
+			</div>
+
+			<div>
+				<textarea id="chatHistory"></textarea>
+				<input type="text" id="chatInput" />
+			</div>
+
+
+			<div>
+				stuff below..
+				<div id="score1"></div>
+				<div id="score2"></div>
+
+			</div>
+
+		</div>
+
+	</body>
+</html>

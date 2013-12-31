@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>wip3r</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <script src="EventTarget.js" type="text/javascript"></script>
+  <script src="game.js" type="text/javascript"></script>
+  <script src="index.js" type="text/javascript"></script>
+  <script src="/socket.io/socket.io.js" type="text/javascript"></script>
+  <!--<meta name="viewport" content="width=774">-->
+</head>
+<body onload="init2()">
+
+  <!-- main board -->
+
+  <table class="boardLayout">
+    <tr>
+      <td>
+        <span class="title">)) wip3r ((</span>
+      </td>
+      <td class="score">
+        <!--<input type="button" value="Undo" onclick="undo()" />-->
+        <!--<input type="button" value="New game" onclick="reset()" />-->
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table width="100%" class="2player">
+          <tr>
+            <td>YOU: <span id="score1"></span></td>
+            <td>STRANGER: <span id="score2"></span></td>    
+          </tr>
+          <tr>
+            <td>
+              <div id="mainarea1" class="mainarea">
+                <div id="gameover1" class="gameover halfsize"></div>
+                <div id="board1" class="board"></div>
+              </div>
+            </td>
+            <td>
+              <div id="mainarea2" class="mainarea">
+                <div id="gameover2" class="gameover halfsize"></div>
+                <div id="status" class="overlay">
+hello!
+                </div>
+                <div id="board2" class="board vacant"></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <div id="chat">
+    <textarea id="chatHistory" readonly></textarea>
+    <input id="chatInput" type="text" />
+    <input id="chatSend" type="button" value="Send" onclick="sendChat()" />
+    <input id="resetButton" type="button" value="Reset" onclick="resetGame()" />
+    <input id="suggestButton" type="button" value="Suggest" onclick="suggestGame()" />
+    <input id="acceptButton" type="button" value="Accept" onclick="acceptGame()" style="display: none" />
+  </div>
+
+  <!-- sounds -->
+
+  <audio id="popAudio0">
+    <source src="audio/pop.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="popAudio1">
+    <source src="audio/pop.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="rumbleAudio">
+    <source src="audio/rumble.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="gameoverAudio">
+    <source src="audio/gameover.mp3" type="audio/mpeg" />
+  </audio>
+
+</body>
+</html>
